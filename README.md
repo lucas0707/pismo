@@ -1,4 +1,4 @@
-# pismo
+# Pismo
 Project for transactions test case from Pismo.
 
 # Running the Project
