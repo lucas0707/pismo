@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.lucas.transactions.domain.valueObjects.transaction.validators.GetTransactionAmountValidatorStrategyTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-01T19:06:41" hostname="lucas-Alienware-m16-R1" time="0.0">
+<testsuite name="com.lucas.transactions.domain.valueObjects.transaction.validators.GetTransactionAmountValidatorStrategyTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-01T19:41:48" hostname="lucas-Alienware-m16-R1" time="0.0">
   <properties/>
   <testcase name="shouldReturnCorrectValidator()" classname="com.lucas.transactions.domain.valueObjects.transaction.validators.GetTransactionAmountValidatorStrategyTests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

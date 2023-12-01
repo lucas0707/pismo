@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.lucas.transactions.api.transaction.TransactionControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-01T19:06:41" hostname="lucas-Alienware-m16-R1" time="0.011">
+<testsuite name="com.lucas.transactions.api.transaction.TransactionControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-01T19:41:48" hostname="lucas-Alienware-m16-R1" time="0.011">
   <properties/>
   <testcase name="shouldCreateTransactionAndReturnId()" classname="com.lucas.transactions.api.transaction.TransactionControllerTest" time="0.011"/>
   <system-out><![CDATA[
@@ -11,20 +11,20 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2023-12-01T16:06:41.120-03:00  INFO 225995 --- [    Test worker] c.l.t.a.t.TransactionControllerTest      : Starting TransactionControllerTest using Java 17.0.9 with PID 225995 (started by lucas in /home/lucas/dev/pismo)
-2023-12-01T16:06:41.120-03:00  INFO 225995 --- [    Test worker] c.l.t.a.t.TransactionControllerTest      : The following 1 profile is active: "test"
-2023-12-01T16:06:41.250-03:00  INFO 225995 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2023-12-01T16:06:41.301-03:00  INFO 225995 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.testcontainers.jdbc.ConnectionWrapper@7de2c19c
-2023-12-01T16:06:41.302-03:00  INFO 225995 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2023-12-01T16:06:41.305-03:00  INFO 225995 --- [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:32941/test (PostgreSQL 16.1)
-2023-12-01T16:06:41.306-03:00  WARN 225995 --- [    Test worker] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 16.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
-2023-12-01T16:06:41.311-03:00  INFO 225995 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.003s)
-2023-12-01T16:06:41.320-03:00  INFO 225995 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 002
-2023-12-01T16:06:41.320-03:00  INFO 225995 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
-2023-12-01T16:06:41.425-03:00  INFO 225995 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-12-01T16:06:41.425-03:00  INFO 225995 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-12-01T16:06:41.425-03:00  INFO 225995 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-12-01T16:06:41.438-03:00  INFO 225995 --- [    Test worker] c.l.t.a.t.TransactionControllerTest      : Started TransactionControllerTest in 0.329 seconds (process running for 4.471)
+2023-12-01T16:41:47.904-03:00  INFO 234528 --- [    Test worker] c.l.t.a.t.TransactionControllerTest      : Starting TransactionControllerTest using Java 17.0.9 with PID 234528 (started by lucas in /home/lucas/dev/pismo)
+2023-12-01T16:41:47.904-03:00  INFO 234528 --- [    Test worker] c.l.t.a.t.TransactionControllerTest      : The following 1 profile is active: "test"
+2023-12-01T16:41:48.027-03:00  INFO 234528 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-12-01T16:41:48.067-03:00  INFO 234528 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.testcontainers.jdbc.ConnectionWrapper@58fbecde
+2023-12-01T16:41:48.067-03:00  INFO 234528 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-12-01T16:41:48.070-03:00  INFO 234528 --- [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:32957/test (PostgreSQL 16.1)
+2023-12-01T16:41:48.073-03:00  WARN 234528 --- [    Test worker] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 16.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2023-12-01T16:41:48.076-03:00  INFO 234528 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.002s)
+2023-12-01T16:41:48.085-03:00  INFO 234528 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 002
+2023-12-01T16:41:48.085-03:00  INFO 234528 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-12-01T16:41:48.160-03:00  INFO 234528 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-12-01T16:41:48.161-03:00  INFO 234528 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-12-01T16:41:48.161-03:00  INFO 234528 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-12-01T16:41:48.176-03:00  INFO 234528 --- [    Test worker] c.l.t.a.t.TransactionControllerTest      : Started TransactionControllerTest in 0.283 seconds (process running for 4.392)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
