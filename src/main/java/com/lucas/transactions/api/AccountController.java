@@ -1,9 +1,10 @@
 package com.lucas.transactions.api;
 
 import com.lucas.transactions.api.dto.account.CreateAccountRequest;
+import com.lucas.transactions.api.dto.account.CreateAccountResponse;
 import com.lucas.transactions.api.dto.account.FindAccountResponse;
 import com.lucas.transactions.domain.account.Account;
-import com.lucas.transactions.usecases.account.CreateAccountUseCase;
+import com.lucas.transactions.usecases.account.CreateAccountService;
 import com.lucas.transactions.usecases.account.FindAccountUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,21 +14,24 @@ import java.util.UUID;
 
 @RestController
 public class AccountController {
-    private final CreateAccountUseCase createAccountUseCase;
+    private final CreateAccountService createAccountService;
     private final FindAccountUseCase findAccountUseCase;
 
+    @Autowired
     AccountController(
-            @Autowired CreateAccountUseCase createAccountUseCase,
-            @Autowired FindAccountUseCase findAccountUseCase
+            CreateAccountService createAccountService,
+            FindAccountUseCase findAccountUseCase
     ) {
-        this.createAccountUseCase = createAccountUseCase;
+        this.createAccountService = createAccountService;
         this.findAccountUseCase = findAccountUseCase;
     }
 
     @PostMapping("/accounts")
-    public ResponseEntity<UUID> createAccount(@RequestBody CreateAccountRequest request) throws Exception {
-        UUID created = createAccountUseCase.createAccount(request);
-        return ResponseEntity.ok(created);
+    public ResponseEntity<CreateAccountResponse> createAccount(
+            @RequestBody CreateAccountRequest request
+    ) throws Exception {
+        UUID createdId = createAccountService.createAccount(request);
+        return ResponseEntity.ok(new CreateAccountResponse(createdId));
     }
 
     @GetMapping("/accounts/{accountId}")

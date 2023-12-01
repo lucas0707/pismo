@@ -6,6 +6,7 @@ package com.transactions.db;
 
 import com.transactions.db.tables.Accounts;
 import com.transactions.db.tables.FlywaySchemaHistory;
+import com.transactions.db.tables.OperationTypes;
 import com.transactions.db.tables.Transactions;
 
 import java.util.Arrays;
@@ -40,6 +41,11 @@ public class Public extends SchemaImpl {
     public final FlywaySchemaHistory FLYWAY_SCHEMA_HISTORY = FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY;
 
     /**
+     * The table <code>public.operation_types</code>.
+     */
+    public final OperationTypes OPERATION_TYPES = OperationTypes.OPERATION_TYPES;
+
+    /**
      * The table <code>public.transactions</code>.
      */
     public final Transactions TRANSACTIONS = Transactions.TRANSACTIONS;
@@ -62,6 +68,7 @@ public class Public extends SchemaImpl {
         return Arrays.asList(
             Accounts.ACCOUNTS,
             FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY,
+            OperationTypes.OPERATION_TYPES,
             Transactions.TRANSACTIONS
         );
     }

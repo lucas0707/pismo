@@ -6,9 +6,11 @@ package com.transactions.db;
 
 import com.transactions.db.tables.Accounts;
 import com.transactions.db.tables.FlywaySchemaHistory;
+import com.transactions.db.tables.OperationTypes;
 import com.transactions.db.tables.Transactions;
 import com.transactions.db.tables.records.AccountsRecord;
 import com.transactions.db.tables.records.FlywaySchemaHistoryRecord;
+import com.transactions.db.tables.records.OperationTypesRecord;
 import com.transactions.db.tables.records.TransactionsRecord;
 
 import org.jooq.ForeignKey;
@@ -32,6 +34,7 @@ public class Keys {
     public static final UniqueKey<AccountsRecord> ACCOUNTS_DOCUMENT_NUMBER_KEY = Internal.createUniqueKey(Accounts.ACCOUNTS, DSL.name("accounts_document_number_key"), new TableField[] { Accounts.ACCOUNTS.DOCUMENT_NUMBER }, true);
     public static final UniqueKey<AccountsRecord> ACCOUNTS_PKEY = Internal.createUniqueKey(Accounts.ACCOUNTS, DSL.name("accounts_pkey"), new TableField[] { Accounts.ACCOUNTS.ACCOUNT_ID }, true);
     public static final UniqueKey<FlywaySchemaHistoryRecord> FLYWAY_SCHEMA_HISTORY_PK = Internal.createUniqueKey(FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY, DSL.name("flyway_schema_history_pk"), new TableField[] { FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY.INSTALLED_RANK }, true);
+    public static final UniqueKey<OperationTypesRecord> PK_OPERATIONTYPES = Internal.createUniqueKey(OperationTypes.OPERATION_TYPES, DSL.name("pk_operationtypes"), new TableField[] { OperationTypes.OPERATION_TYPES.OPERATION_TYPE_ID }, true);
     public static final UniqueKey<TransactionsRecord> PK_TRANSACTIONS = Internal.createUniqueKey(Transactions.TRANSACTIONS, DSL.name("pk_transactions"), new TableField[] { Transactions.TRANSACTIONS.TRANSACTION_ID }, true);
 
     // -------------------------------------------------------------------------

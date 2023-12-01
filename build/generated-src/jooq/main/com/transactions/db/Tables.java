@@ -6,6 +6,7 @@ package com.transactions.db;
 
 import com.transactions.db.tables.Accounts;
 import com.transactions.db.tables.FlywaySchemaHistory;
+import com.transactions.db.tables.OperationTypes;
 import com.transactions.db.tables.Transactions;
 
 
@@ -24,6 +25,11 @@ public class Tables {
      * The table <code>public.flyway_schema_history</code>.
      */
     public static final FlywaySchemaHistory FLYWAY_SCHEMA_HISTORY = FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY;
+
+    /**
+     * The table <code>public.operation_types</code>.
+     */
+    public static final OperationTypes OPERATION_TYPES = OperationTypes.OPERATION_TYPES;
 
     /**
      * The table <code>public.transactions</code>.
