@@ -17,8 +17,13 @@ repositories {
 	mavenCentral()
 }
 
+configurations {
+	flywayMigration
+}
+
 dependencies {
 	jooqGenerator 'org.postgresql:postgresql:42.5.1'
+	flywayMigration 'org.postgresql:postgresql:42.5.1'
 
 	implementation 'org.springframework.boot:spring-boot-starter-jooq'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -33,7 +38,6 @@ dependencies {
 }
 
 jooq {
-
 	configurations {
 		main {
 			generationTool {
@@ -77,7 +81,22 @@ jooq {
 	}
 }
 
-//tasks.named('generateJooq').configure { allInputsDeclared = true }
+flyway {
+	configurations = ['flywayMigration']
+	url = 'jdbc:postgresql://localhost:5432/transactions'
+	user = 'dev'
+	password = 'dev'
+}
+
+tasks.named('generateJooq').configure {
+	dependsOn tasks.named('flywayMigrate')
+
+	inputs.files(fileTree('src/main/resources/db/migration'))
+			.withPropertyName('migrations')
+			.withPathSensitivity(PathSensitivity.RELATIVE)
+
+	allInputsDeclared = true
+}
 
 tasks.named('test') {
 	useJUnitPlatform()

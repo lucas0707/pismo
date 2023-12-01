@@ -4,8 +4,9 @@
 package com.transactions.db;
 
 
+import com.transactions.db.tables.Accounts;
 import com.transactions.db.tables.FlywaySchemaHistory;
-import com.transactions.db.tables.Revinfo;
+import com.transactions.db.tables.Transactions;
 
 
 /**
@@ -15,12 +16,17 @@ import com.transactions.db.tables.Revinfo;
 public class Tables {
 
     /**
+     * The table <code>public.accounts</code>.
+     */
+    public static final Accounts ACCOUNTS = Accounts.ACCOUNTS;
+
+    /**
      * The table <code>public.flyway_schema_history</code>.
      */
     public static final FlywaySchemaHistory FLYWAY_SCHEMA_HISTORY = FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY;
 
     /**
-     * The table <code>public.revinfo</code>.
+     * The table <code>public.transactions</code>.
      */
-    public static final Revinfo REVINFO = Revinfo.REVINFO;
+    public static final Transactions TRANSACTIONS = Transactions.TRANSACTIONS;
 }

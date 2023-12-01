@@ -4,8 +4,9 @@
 package com.transactions.db;
 
 
+import com.transactions.db.tables.Accounts;
 import com.transactions.db.tables.FlywaySchemaHistory;
-import com.transactions.db.tables.Revinfo;
+import com.transactions.db.tables.Transactions;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,14 +30,19 @@ public class Public extends SchemaImpl {
     public static final Public PUBLIC = new Public();
 
     /**
+     * The table <code>public.accounts</code>.
+     */
+    public final Accounts ACCOUNTS = Accounts.ACCOUNTS;
+
+    /**
      * The table <code>public.flyway_schema_history</code>.
      */
     public final FlywaySchemaHistory FLYWAY_SCHEMA_HISTORY = FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY;
 
     /**
-     * The table <code>public.revinfo</code>.
+     * The table <code>public.transactions</code>.
      */
-    public final Revinfo REVINFO = Revinfo.REVINFO;
+    public final Transactions TRANSACTIONS = Transactions.TRANSACTIONS;
 
     /**
      * No further instances allowed
@@ -54,8 +60,9 @@ public class Public extends SchemaImpl {
     @Override
     public final List<Table<?>> getTables() {
         return Arrays.asList(
+            Accounts.ACCOUNTS,
             FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY,
-            Revinfo.REVINFO
+            Transactions.TRANSACTIONS
         );
     }
 }
