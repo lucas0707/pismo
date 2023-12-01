@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.lucas.transactions.infrastructure.postgresql.PostgresqlOperationTypesIntegrationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-12-01T19:41:48" hostname="lucas-Alienware-m16-R1" time="0.006">
+<testsuite name="com.lucas.transactions.infrastructure.postgresql.PostgresqlOperationTypesIntegrationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-12-01T19:44:54" hostname="lucas-Alienware-m16-R1" time="0.006">
   <properties/>
   <testcase name="shouldReturnIfThereIsAnyOperationTypeFalse()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlOperationTypesIntegrationTests" time="0.003"/>
-  <testcase name="shouldReturnIfThereIsAnyOperationTypeTrue()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlOperationTypesIntegrationTests" time="0.002"/>
-  <system-out><![CDATA[2023-12-01T16:41:48.463-03:00  INFO 234528 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for operation type with id: 8
-2023-12-01T16:41:48.467-03:00  INFO 234528 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for operation type with id: 1
+  <testcase name="shouldReturnIfThereIsAnyOperationTypeTrue()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlOperationTypesIntegrationTests" time="0.003"/>
+  <system-out><![CDATA[2023-12-01T16:44:54.040-03:00  INFO 235919 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for operation type with id: 8
+2023-12-01T16:44:54.043-03:00  INFO 235919 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for operation type with id: 1
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

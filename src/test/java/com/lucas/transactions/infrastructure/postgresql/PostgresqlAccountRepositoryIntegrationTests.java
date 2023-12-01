@@ -47,9 +47,6 @@ public class PostgresqlAccountRepositoryIntegrationTests {
     void shouldFetchAccount() throws Exception {
         UUID accountId = UUID.randomUUID();
         createAccount(accountId);
-
-    @Autowired
-    DSLContext dslContext;
         Account account = accountRepository.find(accountId);
 
         Assertions.assertEquals(accountId, account.getId());

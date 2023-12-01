@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.lucas.transactions.infrastructure.postgresql.PostgresqlAccountRepositoryIntegrationTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-12-01T19:41:48" hostname="lucas-Alienware-m16-R1" time="0.258">
+<testsuite name="com.lucas.transactions.infrastructure.postgresql.PostgresqlAccountRepositoryIntegrationTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-12-01T19:44:53" hostname="lucas-Alienware-m16-R1" time="0.276">
   <properties/>
-  <testcase name="shouldReturnIfThereIsAnyAccountFalse()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlAccountRepositoryIntegrationTests" time="0.224"/>
-  <testcase name="shouldFetchAccount()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlAccountRepositoryIntegrationTests" time="0.024"/>
+  <testcase name="shouldReturnIfThereIsAnyAccountFalse()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlAccountRepositoryIntegrationTests" time="0.242"/>
+  <testcase name="shouldFetchAccount()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlAccountRepositoryIntegrationTests" time="0.025"/>
   <testcase name="shouldSaveAccount()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlAccountRepositoryIntegrationTests" time="0.004"/>
   <testcase name="shouldReturnIfThereIsAnyAccountTrue()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlAccountRepositoryIntegrationTests" time="0.004"/>
-  <system-out><![CDATA[2023-12-01T16:41:48.208-03:00  INFO 234528 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for account with id: d847dad9-cfbe-49cb-aace-c0eef598b5b7
-2023-12-01T16:41:48.383-03:00  INFO 234528 --- [    Test worker] org.jooq.Constants                       : 
+  <system-out><![CDATA[2023-12-01T16:44:53.766-03:00  INFO 235919 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for account with id: 4f34adda-42d3-48f2-92e2-df4f2e0ac2c6
+2023-12-01T16:44:53.955-03:00  INFO 235919 --- [    Test worker] org.jooq.Constants                       : 
                                       
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -26,14 +26,14 @@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.18.2
                                       
-2023-12-01T16:41:48.384-03:00  INFO 234528 --- [    Test worker] org.jooq.Constants                       : 
+2023-12-01T16:44:53.955-03:00  INFO 235919 --- [    Test worker] org.jooq.Constants                       : 
 
-jOOQ tip of the day: You can extend jOOQ with alternative syntax using plain SQL templating: https://www.jooq.org/doc/latest/manual/sql-building/plain-sql-templating/
+jOOQ tip of the day: If you're using Liquibase to migrate your schema, the jOOQ code generator can simulate a Liquibase migration to produce its generated code, rather than connecting to an actual database: https://www.jooq.org/doc/latest/manual/code-generation/codegen-liquibase/
 
-2023-12-01T16:41:48.410-03:00  INFO 234528 --- [    Test worker] o.j.i.D.logVersionSupport                : Version                  : Database version is supported by dialect POSTGRES: 16.1 (Debian 16.1-1.pgdg120+1)
-2023-12-01T16:41:48.447-03:00  INFO 234528 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for account with id: 5f8ad728-a19b-4c2d-a254-4987079aea04
-2023-12-01T16:41:48.451-03:00  INFO 234528 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Adding new account with document number: 12345678901
-2023-12-01T16:41:48.457-03:00  INFO 234528 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for account with id: 5d3a5fe8-0f7d-44aa-b5b5-d9ecdaabedea
+2023-12-01T16:44:53.984-03:00  INFO 235919 --- [    Test worker] o.j.i.D.logVersionSupport                : Version                  : Database version is supported by dialect POSTGRES: 16.1 (Debian 16.1-1.pgdg120+1)
+2023-12-01T16:44:54.025-03:00  INFO 235919 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for account with id: 3aa9727b-4370-410a-9b34-ae35dcdda8f7
+2023-12-01T16:44:54.028-03:00  INFO 235919 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Adding new account with document number: 12345678901
+2023-12-01T16:44:54.034-03:00  INFO 235919 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for account with id: e2dd1465-6b62-4ce3-a969-aa688a3afad3
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
