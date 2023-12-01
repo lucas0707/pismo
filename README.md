@@ -8,4 +8,4 @@ To run this project follow the steps, in the root of the project:
 2. Run the command `./gradlew build`
 3. Run the command `docker compose up`
 
-Now the project is ready to be reached in `localhost:8080`
+Now the project is ready to be reached at `localhost:8080`.
