@@ -18,7 +18,7 @@ public class TransactionController {
     TransactionController(CreateTransactionUseCase createTransactionUseCase) {
         this.createTransactionUseCase = createTransactionUseCase;
     }
-    @PostMapping("/transactions")
+    @PostMapping("/v1/transactions")
     public ResponseEntity<UUID> createAccount(@RequestBody CreateTransactionRequest request) throws Exception {
         UUID created = createTransactionUseCase.create(request);
         return ResponseEntity.ok(created);

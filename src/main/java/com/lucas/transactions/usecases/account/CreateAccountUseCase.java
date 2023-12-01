@@ -10,14 +10,13 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 
 @Component
-public class CreateAccountUseCase implements CreateAccountService {
+public class CreateAccountUseCase {
     private final AccountRepository accountRepository;
 
     CreateAccountUseCase(@Autowired AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
 
-    @Override
     public UUID createAccount(CreateAccountRequest request) throws Exception {
         //@TODO add validation for account creation
         // verify document number and if there is any account with that document number
