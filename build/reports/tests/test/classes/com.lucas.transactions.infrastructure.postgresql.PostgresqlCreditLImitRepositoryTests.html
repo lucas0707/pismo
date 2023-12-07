@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - PostgresqlOperationTypesIntegrationTests</title>
+<title>Test results - PostgresqlCreditLImitRepositoryTests</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>PostgresqlOperationTypesIntegrationTests</h1>
+<h1>PostgresqlCreditLImitRepositoryTests</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/com.lucas.transactions.infrastructure.postgresql.html">com.lucas.transactions.infrastructure.postgresql</a> &gt; PostgresqlOperationTypesIntegrationTests</div>
+<a href="../packages/com.lucas.transactions.infrastructure.postgresql.html">com.lucas.transactions.infrastructure.postgresql</a> &gt; PostgresqlCreditLImitRepositoryTests</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">2</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.007s</div>
+<div class="counter">0.024s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,13 +78,18 @@
 </tr>
 </thead>
 <tr>
-<td class="success">shouldReturnIfThereIsAnyOperationTypeFalse()</td>
-<td class="success">0.004s</td>
+<td class="success">shouldFetchCreditLimit()</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">shouldReturnIfThereIsAnyOperationTypeTrue()</td>
-<td class="success">0.003s</td>
+<td class="success">shouldSaveAccount()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldUpdateCreditLimitAggregatedValue()</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -92,8 +97,9 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-12-07T17:30:23.791-03:00  INFO 29474 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for operation type with id: 8
-2023-12-07T17:30:23.795-03:00  INFO 29474 --- [    Test worker] c.l.t.i.p.PostgresqlAccountRepository    : Looking for operation type with id: 1
+<pre>2023-12-07T17:30:23.765-03:00  INFO 29474 --- [    Test worker] .l.t.i.p.PostgresqlCreditLimitRepository : Looking for account credit limit with account id: 80c44b70-e3ed-446b-aef0-408f3e6eb314
+2023-12-07T17:30:23.770-03:00  INFO 29474 --- [    Test worker] .l.t.i.p.PostgresqlCreditLimitRepository : Updating aggregated value for credit limit: f1dd1230-c52b-44d5-a0b4-16832634c942
+2023-12-07T17:30:23.782-03:00  INFO 29474 --- [    Test worker] .l.t.i.p.PostgresqlCreditLimitRepository : Adding new account credit limit for account: 7f8edefb-d19c-41a1-adfa-e1d1ccff015f
 </pre>
 </span>
 </div>

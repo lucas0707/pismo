@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.lucas.transactions.TransactionsApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-01T19:44:52" hostname="lucas-Alienware-m16-R1" time="0.34">
+<testsuite name="com.lucas.transactions.TransactionsApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-07T20:30:21" hostname="lucas-Alienware-m16-R1" time="0.351">
   <properties/>
-  <testcase name="contextLoads()" classname="com.lucas.transactions.TransactionsApplicationTests" time="0.34"/>
-  <system-out><![CDATA[16:44:49.619 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.lucas.transactions.TransactionsApplicationTests]: TransactionsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-16:44:49.661 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.lucas.transactions.TransactionsApplication for test class com.lucas.transactions.TransactionsApplicationTests
+  <testcase name="contextLoads()" classname="com.lucas.transactions.TransactionsApplicationTests" time="0.351"/>
+  <system-out><![CDATA[17:30:18.929 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.lucas.transactions.TransactionsApplicationTests]: TransactionsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:30:18.977 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.lucas.transactions.TransactionsApplication for test class com.lucas.transactions.TransactionsApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,45 +13,46 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2023-12-01T16:44:49.793-03:00  INFO 235919 --- [    Test worker] c.l.t.TransactionsApplicationTests       : Starting TransactionsApplicationTests using Java 17.0.9 with PID 235919 (started by lucas in /home/lucas/dev/pismo)
-2023-12-01T16:44:49.793-03:00  INFO 235919 --- [    Test worker] c.l.t.TransactionsApplicationTests       : The following 1 profile is active: "test"
-2023-12-01T16:44:50.155-03:00  INFO 235919 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-01T16:44:50.172-03:00  INFO 235919 --- [    Test worker] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
-2023-12-01T16:44:50.173-03:00  INFO 235919 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-2023-12-01T16:44:50.229-03:00  INFO 235919 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
-2023-12-01T16:44:50.353-03:00  INFO 235919 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
-2023-12-01T16:44:50.354-03:00  INFO 235919 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
-2023-12-01T16:44:50.362-03:00  INFO 235919 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+2023-12-07T17:30:19.119-03:00  INFO 29474 --- [    Test worker] c.l.t.TransactionsApplicationTests       : Starting TransactionsApplicationTests using Java 17.0.9 with PID 29474 (started by lucas in /home/lucas/dev/pismo)
+2023-12-07T17:30:19.119-03:00  INFO 29474 --- [    Test worker] c.l.t.TransactionsApplicationTests       : The following 1 profile is active: "test"
+2023-12-07T17:30:19.493-03:00  INFO 29474 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-07T17:30:19.511-03:00  INFO 29474 --- [    Test worker] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2023-12-07T17:30:19.512-03:00  INFO 29474 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2023-12-07T17:30:19.573-03:00  INFO 29474 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2023-12-07T17:30:19.689-03:00  INFO 29474 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2023-12-07T17:30:19.690-03:00  INFO 29474 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2023-12-07T17:30:19.698-03:00  INFO 29474 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
   Server Version: 24.0.6
   API Version: 1.43
   Operating System: Ubuntu 22.04.3 LTS
   Total Memory: 31769 MB
-2023-12-01T16:44:50.373-03:00  INFO 235919 --- [    Test worker] tc.testcontainers/ryuk:0.5.1             : Creating container for image: testcontainers/ryuk:0.5.1
-2023-12-01T16:44:50.376-03:00  INFO 235919 --- [    Test worker] o.t.utility.RegistryAuthLocator          : Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.5.1, configFile: /home/lucas/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/lucas/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
-2023-12-01T16:44:50.430-03:00  INFO 235919 --- [    Test worker] tc.testcontainers/ryuk:0.5.1             : Container testcontainers/ryuk:0.5.1 is starting: 26fcb65f48c5ed2cb6ef6b488b7c9ad1edb3f4e45fb600a4ba55c1d5b45b9c08
-2023-12-01T16:44:50.751-03:00  INFO 235919 --- [    Test worker] tc.testcontainers/ryuk:0.5.1             : Container testcontainers/ryuk:0.5.1 started in PT0.377927148S
-2023-12-01T16:44:50.753-03:00  INFO 235919 --- [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
-2023-12-01T16:44:50.754-03:00  INFO 235919 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
-2023-12-01T16:44:50.754-03:00  INFO 235919 --- [    Test worker] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
-2023-12-01T16:44:50.754-03:00  INFO 235919 --- [    Test worker] tc.postgres:latest                       : Creating container for image: postgres:latest
-2023-12-01T16:44:50.763-03:00  INFO 235919 --- [    Test worker] tc.postgres:latest                       : Container postgres:latest is starting: d671817edc62bebd13e7cce86cc8d9f2ae7431571c9a35a5a5efc22067eb1072
-2023-12-01T16:44:51.723-03:00  INFO 235919 --- [    Test worker] tc.postgres:latest                       : Container postgres:latest started in PT0.969197241S
-2023-12-01T16:44:51.724-03:00  INFO 235919 --- [    Test worker] tc.postgres:latest                       : Container is started (JDBC URL: jdbc:postgresql://localhost:32959/test?loggerLevel=OFF)
-2023-12-01T16:44:51.797-03:00  INFO 235919 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@2d74cbbd
-2023-12-01T16:44:51.798-03:00  INFO 235919 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-01T16:44:51.826-03:00  INFO 235919 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
-2023-12-01T16:44:51.826-03:00  INFO 235919 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
-2023-12-01T16:44:51.826-03:00  INFO 235919 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : 
-2023-12-01T16:44:51.832-03:00  INFO 235919 --- [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:32959/test (PostgreSQL 16.1)
-2023-12-01T16:44:51.835-03:00  WARN 235919 --- [    Test worker] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 16.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
-2023-12-01T16:44:51.842-03:00  INFO 235919 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
-2023-12-01T16:44:51.843-03:00  INFO 235919 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.005s)
-2023-12-01T16:44:51.849-03:00  INFO 235919 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
-2023-12-01T16:44:51.865-03:00  INFO 235919 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
-2023-12-01T16:44:51.867-03:00  INFO 235919 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "001 - create accounts and transactions table"
-2023-12-01T16:44:51.875-03:00  INFO 235919 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "002 - create operation type table"
-2023-12-01T16:44:51.879-03:00  INFO 235919 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v002 (execution time 00:00.004s)
-2023-12-01T16:44:52.346-03:00  INFO 235919 --- [    Test worker] c.l.t.TransactionsApplicationTests       : Started TransactionsApplicationTests in 2.634 seconds (process running for 3.028)
+2023-12-07T17:30:19.708-03:00  INFO 29474 --- [    Test worker] tc.testcontainers/ryuk:0.5.1             : Creating container for image: testcontainers/ryuk:0.5.1
+2023-12-07T17:30:19.710-03:00  INFO 29474 --- [    Test worker] o.t.utility.RegistryAuthLocator          : Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.5.1, configFile: /home/lucas/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/lucas/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2023-12-07T17:30:19.759-03:00  INFO 29474 --- [    Test worker] tc.testcontainers/ryuk:0.5.1             : Container testcontainers/ryuk:0.5.1 is starting: 1f83310c653453999362765ef00f37508212e577a5ee8ac07e800579bd61841b
+2023-12-07T17:30:20.052-03:00  INFO 29474 --- [    Test worker] tc.testcontainers/ryuk:0.5.1             : Container testcontainers/ryuk:0.5.1 started in PT0.343828044S
+2023-12-07T17:30:20.054-03:00  INFO 29474 --- [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2023-12-07T17:30:20.054-03:00  INFO 29474 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2023-12-07T17:30:20.054-03:00  INFO 29474 --- [    Test worker] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2023-12-07T17:30:20.055-03:00  INFO 29474 --- [    Test worker] tc.postgres:latest                       : Creating container for image: postgres:latest
+2023-12-07T17:30:20.062-03:00  INFO 29474 --- [    Test worker] tc.postgres:latest                       : Container postgres:latest is starting: aada0cf5c32b7e4b27e0eaaf992106a283e781e8bcc605b3f6d79a52be5d5485
+2023-12-07T17:30:20.998-03:00  INFO 29474 --- [    Test worker] tc.postgres:latest                       : Container postgres:latest started in PT0.943292827S
+2023-12-07T17:30:20.999-03:00  INFO 29474 --- [    Test worker] tc.postgres:latest                       : Container is started (JDBC URL: jdbc:postgresql://localhost:32783/test?loggerLevel=OFF)
+2023-12-07T17:30:21.069-03:00  INFO 29474 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@fabef2e
+2023-12-07T17:30:21.070-03:00  INFO 29474 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-07T17:30:21.101-03:00  INFO 29474 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2023-12-07T17:30:21.101-03:00  INFO 29474 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-12-07T17:30:21.101-03:00  INFO 29474 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : 
+2023-12-07T17:30:21.107-03:00  INFO 29474 --- [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:32783/test (PostgreSQL 16.1)
+2023-12-07T17:30:21.110-03:00  WARN 29474 --- [    Test worker] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 16.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2023-12-07T17:30:21.120-03:00  INFO 29474 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-12-07T17:30:21.122-03:00  INFO 29474 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.008s)
+2023-12-07T17:30:21.128-03:00  INFO 29474 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-12-07T17:30:21.146-03:00  INFO 29474 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-12-07T17:30:21.149-03:00  INFO 29474 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "001 - create accounts and transactions table"
+2023-12-07T17:30:21.156-03:00  INFO 29474 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "002 - create operation type table"
+2023-12-07T17:30:21.160-03:00  INFO 29474 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "003 - create account credit limit table"
+2023-12-07T17:30:21.164-03:00  INFO 29474 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "public", now at version v003 (execution time 00:00.005s)
+2023-12-07T17:30:21.772-03:00  INFO 29474 --- [    Test worker] c.l.t.TransactionsApplicationTests       : Started TransactionsApplicationTests in 2.744 seconds (process running for 3.171)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

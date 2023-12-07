@@ -3,9 +3,9 @@ package com.lucas.transactions.usecases.account;
 import com.lucas.transactions.api.dto.account.CreateAccountRequest;
 import com.lucas.transactions.domain.account.Account;
 import com.lucas.transactions.domain.account.AccountRepository;
+import com.lucas.transactions.usecases.creditLimit.CreateCreditLimit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
@@ -13,8 +13,16 @@ import java.util.UUID;
 public class CreateAccountUseCase {
     private final AccountRepository accountRepository;
 
-    CreateAccountUseCase(@Autowired AccountRepository accountRepository) {
+    private final CreateCreditLimit createAccountCreditLimit;
+
+
+    @Autowired
+    CreateAccountUseCase(
+            AccountRepository accountRepository,
+            CreateCreditLimit createAccountCreditLimit
+    ) {
         this.accountRepository = accountRepository;
+        this.createAccountCreditLimit = createAccountCreditLimit;
     }
 
     public UUID createAccount(CreateAccountRequest request) throws Exception {
@@ -23,6 +31,9 @@ public class CreateAccountUseCase {
 
         Account newAccount = new Account(request.documentNumber);
 
-        return accountRepository.create(newAccount).getId();
+        UUID accountId = accountRepository.create(newAccount).getId();
+
+        createAccountCreditLimit.createForAccount(accountId);
+        return accountId;
     }
 }

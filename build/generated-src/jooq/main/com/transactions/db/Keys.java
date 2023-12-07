@@ -4,10 +4,12 @@
 package com.transactions.db;
 
 
+import com.transactions.db.tables.AccountCreditLimit;
 import com.transactions.db.tables.Accounts;
 import com.transactions.db.tables.FlywaySchemaHistory;
 import com.transactions.db.tables.OperationTypes;
 import com.transactions.db.tables.Transactions;
+import com.transactions.db.tables.records.AccountCreditLimitRecord;
 import com.transactions.db.tables.records.AccountsRecord;
 import com.transactions.db.tables.records.FlywaySchemaHistoryRecord;
 import com.transactions.db.tables.records.OperationTypesRecord;
@@ -31,6 +33,8 @@ public class Keys {
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final UniqueKey<AccountCreditLimitRecord> ACCOUNT_CREDIT_LIMIT_ACCOUNT_ID_KEY = Internal.createUniqueKey(AccountCreditLimit.ACCOUNT_CREDIT_LIMIT, DSL.name("account_credit_limit_account_id_key"), new TableField[] { AccountCreditLimit.ACCOUNT_CREDIT_LIMIT.ACCOUNT_ID }, true);
+    public static final UniqueKey<AccountCreditLimitRecord> ACCOUNT_CREDIT_LIMIT_PKEY = Internal.createUniqueKey(AccountCreditLimit.ACCOUNT_CREDIT_LIMIT, DSL.name("account_credit_limit_pkey"), new TableField[] { AccountCreditLimit.ACCOUNT_CREDIT_LIMIT.ID }, true);
     public static final UniqueKey<AccountsRecord> ACCOUNTS_DOCUMENT_NUMBER_KEY = Internal.createUniqueKey(Accounts.ACCOUNTS, DSL.name("accounts_document_number_key"), new TableField[] { Accounts.ACCOUNTS.DOCUMENT_NUMBER }, true);
     public static final UniqueKey<AccountsRecord> ACCOUNTS_PKEY = Internal.createUniqueKey(Accounts.ACCOUNTS, DSL.name("accounts_pkey"), new TableField[] { Accounts.ACCOUNTS.ACCOUNT_ID }, true);
     public static final UniqueKey<FlywaySchemaHistoryRecord> FLYWAY_SCHEMA_HISTORY_PK = Internal.createUniqueKey(FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY, DSL.name("flyway_schema_history_pk"), new TableField[] { FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY.INSTALLED_RANK }, true);
@@ -41,5 +45,6 @@ public class Keys {
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final ForeignKey<AccountCreditLimitRecord, AccountsRecord> ACCOUNT_CREDIT_LIMIT__FK_ACCOUNT = Internal.createForeignKey(AccountCreditLimit.ACCOUNT_CREDIT_LIMIT, DSL.name("fk_account"), new TableField[] { AccountCreditLimit.ACCOUNT_CREDIT_LIMIT.ACCOUNT_ID }, Keys.ACCOUNTS_PKEY, new TableField[] { Accounts.ACCOUNTS.ACCOUNT_ID }, true);
     public static final ForeignKey<TransactionsRecord, AccountsRecord> TRANSACTIONS__FK_ACCOUNT = Internal.createForeignKey(Transactions.TRANSACTIONS, DSL.name("fk_account"), new TableField[] { Transactions.TRANSACTIONS.ACCOUNT_ID }, Keys.ACCOUNTS_PKEY, new TableField[] { Accounts.ACCOUNTS.ACCOUNT_ID }, true);
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.lucas.transactions.infrastructure.postgresql.PostgresqlCreditLImitRepositoryTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-12-07T20:30:23" hostname="lucas-Alienware-m16-R1" time="0.026">
+  <properties/>
+  <testcase name="shouldFetchCreditLimit()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlCreditLImitRepositoryTests" time="0.007"/>
+  <testcase name="shouldUpdateCreditLimitAggregatedValue()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlCreditLImitRepositoryTests" time="0.011"/>
+  <testcase name="shouldSaveAccount()" classname="com.lucas.transactions.infrastructure.postgresql.PostgresqlCreditLImitRepositoryTests" time="0.006"/>
+  <system-out><![CDATA[2023-12-07T17:30:23.765-03:00  INFO 29474 --- [    Test worker] .l.t.i.p.PostgresqlCreditLimitRepository : Looking for account credit limit with account id: 80c44b70-e3ed-446b-aef0-408f3e6eb314
+2023-12-07T17:30:23.770-03:00  INFO 29474 --- [    Test worker] .l.t.i.p.PostgresqlCreditLimitRepository : Updating aggregated value for credit limit: f1dd1230-c52b-44d5-a0b4-16832634c942
+2023-12-07T17:30:23.782-03:00  INFO 29474 --- [    Test worker] .l.t.i.p.PostgresqlCreditLimitRepository : Adding new account credit limit for account: 7f8edefb-d19c-41a1-adfa-e1d1ccff015f
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

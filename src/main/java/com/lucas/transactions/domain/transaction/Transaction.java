@@ -48,4 +48,9 @@ public class Transaction {
     public UUID getAccountId() {
         return accountId;
     }
+
+    public double applyAmountToAggregatedValue(Amount creditLimitAggregatedValue) {
+
+        return this.amount.getValueNumber() + (creditLimitAggregatedValue.getValueNumber() * -1);
+    }
 }

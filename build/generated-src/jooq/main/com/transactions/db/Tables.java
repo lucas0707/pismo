@@ -4,6 +4,7 @@
 package com.transactions.db;
 
 
+import com.transactions.db.tables.AccountCreditLimit;
 import com.transactions.db.tables.Accounts;
 import com.transactions.db.tables.FlywaySchemaHistory;
 import com.transactions.db.tables.OperationTypes;
@@ -15,6 +16,11 @@ import com.transactions.db.tables.Transactions;
  */
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tables {
+
+    /**
+     * The table <code>public.account_credit_limit</code>.
+     */
+    public static final AccountCreditLimit ACCOUNT_CREDIT_LIMIT = AccountCreditLimit.ACCOUNT_CREDIT_LIMIT;
 
     /**
      * The table <code>public.accounts</code>.

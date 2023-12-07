@@ -4,6 +4,7 @@
 package com.transactions.db;
 
 
+import com.transactions.db.tables.AccountCreditLimit;
 import com.transactions.db.tables.Accounts;
 import com.transactions.db.tables.FlywaySchemaHistory;
 import com.transactions.db.tables.OperationTypes;
@@ -29,6 +30,11 @@ public class Public extends SchemaImpl {
      * The reference instance of <code>public</code>
      */
     public static final Public PUBLIC = new Public();
+
+    /**
+     * The table <code>public.account_credit_limit</code>.
+     */
+    public final AccountCreditLimit ACCOUNT_CREDIT_LIMIT = AccountCreditLimit.ACCOUNT_CREDIT_LIMIT;
 
     /**
      * The table <code>public.accounts</code>.
@@ -66,6 +72,7 @@ public class Public extends SchemaImpl {
     @Override
     public final List<Table<?>> getTables() {
         return Arrays.asList(
+            AccountCreditLimit.ACCOUNT_CREDIT_LIMIT,
             Accounts.ACCOUNTS,
             FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY,
             OperationTypes.OPERATION_TYPES,
